@@ -1,0 +1,16 @@
+{
+  "name": "数字花园 · 博客 × 游戏厅 × 工具箱",
+  "short_name": "数字花园",
+  "description": "个人内容空间：博客、29 款小游戏、工具箱、留言板",
+  "lang": "zh-CN",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f3f5ea",
+  "theme_color": "#24513a",
+  "icons": [
+    { "src": "https://image.qwenlm.ai/generated-images/fcc98962-0f4a-4d28-afc1-ba9acb5e943a/_result.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "https://image.qwenlm.ai/generated-images/fcc98962-0f4a-4d28-afc1-ba9acb5e943a/_result.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

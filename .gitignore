@@ -1,0 +1,16 @@
+node_modules/
+.next/
+dist/
+build/
+*.log
+
+# secrets
+.env*
+.dev.vars
+内测账号.txt
+workspace*.tar
+node_modules
+dist
+.open-next/
+.next/
+wrangler.toml

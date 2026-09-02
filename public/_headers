@@ -1,0 +1,12 @@
+# Cloudflare Pages 响应头配置
+# sw.js 与 index.html 绝不缓存，保证每次部署后用户立即拿到新版本（防白屏/旧引用）
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+/manifest.webmanifest
+  Cache-Control: no-cache
+
+# 带 hash 的静态资源可长期缓存
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

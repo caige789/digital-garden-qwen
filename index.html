@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#24513a" />
+    <meta name="description" content="数字花园 —— 个人博客、29 款小游戏厅、实用工具箱与留言板，手机电脑都能逛。" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="https://image.qwenlm.ai/generated-images/fcc98962-0f4a-4d28-afc1-ba9acb5e943a/_result.png" />
+    <link rel="apple-touch-icon" href="https://image.qwenlm.ai/generated-images/fcc98962-0f4a-4d28-afc1-ba9acb5e943a/_result.png" />
+    <!-- 字体非阻塞加载：网络受限时自动用系统字体（苹方/雅黑），绝不白屏 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    </noscript>
+    <title>数字花园 · 博客 × 游戏厅 × 工具箱</title>
+  </head>
+  <body>
+    <div id="root">
+      <div id="boot-splash" style="position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#f3f5ea;font-family:'Noto Sans SC',sans-serif;">
+        <div style="font-size:44px;animation:sway 1.4s ease-in-out infinite;">🌱</div>
+        <div style="font-size:15px;font-weight:700;color:#24513a;">花园开门中…</div>
+      </div>
+      <style>@keyframes sway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}</style>
+    </div>
+    <script>
+      // JS 加载/执行失败兜底：10 秒后仍未渲染则提示刷新（防白屏无任何反馈）
+      window.__gardenBooted = false;
+      setTimeout(function () {
+        if (window.__gardenBooted) return;
+        var el = document.getElementById("boot-splash");
+        if (el) el.innerHTML = '<div style="font-size:40px">🥀</div><div style="font-size:15px;font-weight:700;color:#24513a;margin:6px 0 10px">加载较慢或失败</div><button onclick="location.reload()" style="min-height:44px;padding:10px 24px;border-radius:12px;border:1.5px solid #1e3325;background:#3e8e52;color:#fff;font-weight:700;font-size:14px">重新加载</button><div style="font-size:12px;color:#47604f;margin-top:8px">如仍失败，请清除浏览器缓存后重试</div>';
+      }, 10000);
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
